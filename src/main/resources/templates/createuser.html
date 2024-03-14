@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<title>Frontpage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../public/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
+</head>
+
+<body>
+
+
+
+<header>
+    <a href="index.html" th:href="@{/}">
+        <img src="../public/images/fourthingsplus.png"  th:src="@{/images/fourthingsplus.png}" width="25%"/>
+
+    </a>
+</header>
+
+<div class="center">
+    <h2>Username</h2>
+
+    <form method="post" action="/login"> <!-- Update the form action -->
+        <input type="text" name="username" placeholder="username"/>
+
+        <h2>Password</h2>
+
+        <input type="password" name="password1" placeholder="Enter your password"/>
+
+        <br>
+        <br>
+
+        <input type="password" name="password2" placeholder="Enter your password again"/>
+
+        <form>
+
+            <br>
+
+            <br>
+
+            <button type="submit" formaction="/createuser">Create user</button>
+
+
+            <div><p th:text="${#ctx.message}"></p></div>
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
